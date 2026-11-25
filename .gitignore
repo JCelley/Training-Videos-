@@ -1,0 +1,13 @@
+# Manim render output (MP4s, frames, generated voiceover audio)
+media/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.vscode/
