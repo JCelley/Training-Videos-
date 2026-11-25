@@ -45,6 +45,16 @@ TEXT_COLOR = WHITE
 TITLE_SIZE = 48
 LABEL_SIZE = 30
 BULLET_SIZE = 28
+CALLOUT_SIZE = 24
+
+BACKGROUND = APW_DARK
+FONT = "Segoe UI"
+Text.set_default(font=FONT)
+
+# Part fills for cross-sections
+STEEL = "#5D6E88"       # external part (bolt, plug)
+STEEL_DARK = "#2C3A55"  # internal part (nut, housing)
+GAUGE = "#A9B4C6"       # gauges
 
 
 # --- Text helpers -----------------------------------------------------------
@@ -73,6 +83,34 @@ def apw_logo(height=2.5):
     return ImageMobject(str(LOGO_PATH)).set_height(height)
 
 
+def callout(text, targets, label_at, color=TEXT_COLOR, edge=LEFT, font_size=CALLOUT_SIZE):
+    """A label with pointer lines to one or more points on the drawing.
+
+    label_at places the label's `edge` (LEFT = label's left side, RIGHT = its right side).
+    Returns VGroup(label, lines, dots). Show it with show_callout().
+    """
+    pts = [np.array(targets, dtype=float)] if np.ndim(targets) == 1 else [np.array(t, dtype=float) for t in targets]
+    label = Text(text, font_size=font_size, color=color, line_spacing=0.8)
+    label.move_to(label_at, aligned_edge=edge)
+    lines, dots = VGroup(), VGroup()
+    for p in pts:
+        if p[0] >= label.get_right()[0]:
+            start = label.get_right() + RIGHT * 0.12
+        elif p[0] <= label.get_left()[0]:
+            start = label.get_left() + LEFT * 0.12
+        elif p[1] > label.get_center()[1]:
+            start = label.get_top() + UP * 0.1
+        else:
+            start = label.get_bottom() + DOWN * 0.1
+        lines.add(Line(start, p, color=color, stroke_width=2.5))
+        dots.add(Dot(p, radius=0.05, color=color))
+    return VGroup(label, lines, dots)
+
+
+def show_callout(c):
+    return AnimationGroup(FadeIn(c[0]), Create(c[1]), FadeIn(c[2], scale=0.5))
+
+
 # --- Base scene -------------------------------------------------------------
 class APWScene(VoiceoverScene):
     """VoiceoverScene with APW voice, corner logo, intro and outro."""
@@ -82,8 +120,25 @@ class APWScene(VoiceoverScene):
 
     def setup(self):
         super().setup()
+        self.camera.background_color = BACKGROUND
         self.set_speech_service(GTTSService())
         self.corner_logo = None
+        self.header = None
+        self.section_label = None
+
+    def set_header(self, text):
+        """Small video title in the top-left corner, in logo blue. Returns an animation."""
+        self.header = Text(text, font_size=28, color=APW_LOGO_BLUE, weight=BOLD).to_corner(UL, buff=0.4)
+        return FadeIn(self.header)
+
+    def section(self, name):
+        """Swap the section name next to the header. Returns a list of animations."""
+        anims = []
+        if self.section_label is not None:
+            anims.append(FadeOut(self.section_label, run_time=0.4))
+        self.section_label = Text(name, font_size=28, color=TEXT_COLOR).next_to(self.header, RIGHT, buff=0.35)
+        anims.append(FadeIn(self.section_label, run_time=0.4))
+        return anims
 
     def _corner_position(self, mob):
         return mob.to_corner(DR, buff=0.25)

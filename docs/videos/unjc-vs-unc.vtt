@@ -1,89 +1,121 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:02.662
-Let's look at U N J C threads, and
+00:00:01.000 --> 00:00:06.972
+U N J C versus U N C threads, and what changes on the internal thread.
 
 2
-00:00:02.762 --> 00:00:05.588
-how they differ from standard U N C.
+00:00:09.583 --> 00:00:13.030
+Here's a standard U N C external thread, cut
 
 3
-00:00:05.688 --> 00:00:10.252
-The J means the external thread must have a controlled, rounded
+00:00:13.130 --> 00:00:15.771
+in half so you can see both sides.
 
 4
-00:00:10.352 --> 00:00:14.693
-root. A rounded root spreads out stress, so the bolt resists
+00:00:15.883 --> 00:00:19.247
+Its root can be flat, with sharp corners. Under
 
 5
-00:00:14.793 --> 00:00:19.580
-fatigue cracking much better. That's why it's common in aerospace.
+00:00:19.347 --> 00:00:23.007
+load, those corners are where fatigue cracks start.
 
 6
-00:00:20.680 --> 00:00:24.577
-Here's a standard U N C external thread. Its root can
+00:00:23.133 --> 00:00:25.317
+On U N J C, the root must be a
 
 7
-00:00:24.677 --> 00:00:29.028
-be flat or sharp, and those corners are where cracks start.
+00:00:25.417 --> 00:00:30.113
+controlled radius, fifteen to eighteen hundredths of the pitch.
 
 8
-00:00:29.132 --> 00:00:31.863
-On a U N J C thread, the root is a
+00:00:30.200 --> 00:00:35.956
+The rounded root sits higher, so the external minor diameter is larger.
 
 9
-00:00:31.963 --> 00:00:37.360
-required radius, roughly fifteen to eighteen percent of the pitch.
+00:00:36.056 --> 00:00:39.916
+U N J C external threads are class three A only.
 
 10
-00:00:37.460 --> 00:00:40.978
-For the external thread, that means a larger minimum
+00:00:40.500 --> 00:00:45.872
+Now the mating part: a nut with a standard U N C internal thread.
 
 11
-00:00:41.078 --> 00:00:44.248
-minor diameter, and it's held to class three A.
+00:00:45.966 --> 00:00:49.466
+Zoom in on one root, at true proportions.
 
 12
-00:00:45.348 --> 00:00:49.420
-Now the internal thread. A standard U N C minor diameter
+00:00:50.183 --> 00:00:53.922
+Here's the bolt's rounded root, and the nut's crest
 
 13
-00:00:49.520 --> 00:00:53.816
-would let the nut's crests run down into that rounded root.
+00:00:54.022 --> 00:00:56.707
+at the standard U N C minor diameter.
 
 14
-00:00:53.916 --> 00:00:56.549
-So U N J C internal threads have
+00:00:56.800 --> 00:01:01.065
+The corners of the nut's crest run into the root radius. That's
 
 15
-00:00:56.649 --> 00:01:00.392
-a larger minor diameter, to clear the radius.
+00:01:01.165 --> 00:01:05.292
+metal on metal, right where the bolt is most highly stressed.
 
 16
-00:01:01.499 --> 00:01:05.815
-For the internal thread, pitch and major diameter match U N
+00:01:05.383 --> 00:01:09.377
+So U N J C internal threads have a larger minimum
 
 17
-00:01:05.915 --> 00:01:10.232
-C class three B. The difference is the minor diameter. It's
+00:01:09.477 --> 00:01:14.307
+minor diameter. The crest moves out, and clears the radius.
 
 18
-00:01:10.332 --> 00:01:14.349
-larger, so you drill or bore bigger, and the thread has
+00:01:15.000 --> 00:01:19.535
+Back to the full thread. Pitch diameter and major diameter
 
 19
-00:01:14.449 --> 00:01:19.214
-a bit less engagement. Check pitch diameter with standard three B
+00:01:19.635 --> 00:01:22.412
+are the same as U N C class three B.
 
 20
-00:01:19.314 --> 00:01:22.807
-gauges, but check the minor diameter separately.
+00:01:22.500 --> 00:01:27.068
+Only the minor diameter changes. It's larger, so you drill or
 
 21
-00:01:22.916 --> 00:01:26.992
-Always confirm the exact limits on the print and
+00:01:27.168 --> 00:01:32.120
+bore bigger, and you get about ten percent less thread engagement.
 
 22
-00:01:27.092 --> 00:01:29.080
+00:01:32.716 --> 00:01:35.452
+To check it, use standard three B GO
+
+23
+00:01:35.552 --> 00:01:38.760
+and NO GO thread plugs for pitch diameter.
+
+24
+00:01:38.850 --> 00:01:43.070
+Then check the minor diameter separately, with a plain
+
+25
+00:01:43.170 --> 00:01:45.710
+plug gauge to the U N J C limits.
+
+26
+00:01:46.400 --> 00:01:51.133
+Here are the minimum minor diameters for every standard U N
+
+27
+00:01:51.233 --> 00:01:54.820
+C and U N J C internal thread, class three B.
+
+28
+00:01:58.916 --> 00:02:03.808
+And the larger sizes. The U N J C minor is always bigger.
+
+29
+00:02:07.900 --> 00:02:11.976
+Always confirm the exact limits on the print and
+
+30
+00:02:12.076 --> 00:02:14.064
 in A S M E B 1 point 15.

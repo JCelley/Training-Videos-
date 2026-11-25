@@ -53,7 +53,10 @@ New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). 
 
 ## Visual style
 
-- Default Manim dark background
+- APW navy background (`APW_DARK`, set by `APWScene`), Segoe UI text
+- Show parts as real geometry (sections through the axis so both sides show), not schematic squiggles
+- Point at the area in question with `callout()` labels instead of bullet slides
+- Keep transitions clean: Transform only between shapes built with the same point count; never Transform text (fade it)
 - Color meaning is consistent across videos:
   - Blue = standard / baseline (e.g. UNC)
   - Green = improved / correct (e.g. UNJC)
