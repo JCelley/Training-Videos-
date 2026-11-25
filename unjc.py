@@ -57,7 +57,7 @@ class UNJCvsUNC(VoiceoverScene):
         with self.voiceover(text="Here's a standard U N C external thread. Its root can be flat or sharp, "
                                  "and those corners are where cracks start.") as t:
             self.play(Create(un), FadeIn(tag), run_time=t.duration * 0.6)
-            self.play(LaggedStart(*[Indicate(d, scale_factor=1.8) for d in dots]), run_time=t.duration * 0.4)
+            self.play(LaggedStart(*[Indicate(d, color=RED, scale_factor=1.8) for d in dots]), run_time=t.duration * 0.4)
 
         unj = unj_profile().shift(DOWN * 1.2)
         tag2 = Text("UNJC external: required root radius", font_size=28).next_to(title, DOWN, buff=0.5)
@@ -82,10 +82,10 @@ class UNJCvsUNC(VoiceoverScene):
             self.play(Transform(tag, tag3), Create(un_line), FadeIn(un_lbl), run_time=t.duration)
 
         unj_line = DashedLine([-4.6, -0.8, 0], [4.6, -0.8, 0], color=ORANGE)
-        unj_lbl = Text("UNJC 3B min minor (larger)", font_size=22, color=ORANGE).next_to(unj_line, UP, buff=0.1)
+        unj_lbl = Text("UNJC 3B min minor (larger)", font_size=22, color=ORANGE).next_to(un_lbl, DOWN, buff=0.15, aligned_edge=RIGHT)
         with self.voiceover(text="So U N J C internal threads have a larger minor diameter, to clear the radius.") as t:
             self.play(TransformFromCopy(un_line, unj_line), FadeIn(unj_lbl), run_time=t.duration)
-        self.play(FadeOut(VGroup(unj, un_line, un_lbl, unj_line, unj_lbl)))
+        self.play(FadeOut(VGroup(unj, un_line, un_lbl, unj_line, unj_lbl, tag)))
 
         internal = bullets("Pitch diameter: same as UNC class 3B",
                            "Major diameter: same as UNC 3B",
@@ -97,8 +97,7 @@ class UNJCvsUNC(VoiceoverScene):
                                  "The difference is the minor diameter. It's larger, so you drill or bore bigger, "
                                  "and the thread has a bit less engagement. Check pitch diameter with standard three B "
                                  "gauges, but check the minor diameter separately.") as t:
-            self.play(FadeOut(tag),
-                      LaggedStart(*[FadeIn(b, shift=RIGHT) for b in internal], lag_ratio=0.3), run_time=t.duration)
+            self.play(LaggedStart(*[FadeIn(b, shift=RIGHT) for b in internal], lag_ratio=0.3), run_time=t.duration)
 
         with self.voiceover(text="Always confirm the exact limits on the print and in A S M E B 1 point 15.") as t:
             self.play(Indicate(internal[2]), run_time=t.duration)
