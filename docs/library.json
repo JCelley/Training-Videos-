@@ -1,0 +1,24 @@
+{
+  "videos": [
+    {
+      "id": "photolithography",
+      "title": "Photolithography",
+      "topic": "Processes",
+      "description": "Test video: the eight steps of printing a pattern onto a silicon wafer.",
+      "duration": 39,
+      "video": "videos/photolithography.mp4",
+      "poster": "videos/photolithography.jpg",
+      "captions": "videos/photolithography.vtt"
+    },
+    {
+      "id": "house-style-demo",
+      "title": "APW House Style Demo",
+      "topic": "About",
+      "description": "The intro, color meanings and layout used in every APW training video.",
+      "duration": 19,
+      "video": "videos/house-style-demo.mp4",
+      "poster": "videos/house-style-demo.jpg",
+      "captions": "videos/house-style-demo.vtt"
+    }
+  ]
+}

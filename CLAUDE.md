@@ -25,6 +25,16 @@ Narrated training videos for American Precision Works (APW), a precision CNC mac
 | `unjc.py` | `UNJCvsUNC` | UNJC vs UNC threads, focused on internal thread dimensions |
 | `style_demo.py` | `StyleDemo` | Check that the house style renders |
 
+## Video library (GitHub Pages)
+
+The repo is public, so the Pages site is public. `docs/` is the site, served by GitHub Pages from `main` / `docs`.
+
+- `library.json` lists every video (id, title, file, scene, topic, description, status)
+- Only `"status": "approved"` videos are published. Set that only after the content has been checked (see Accuracy).
+- `python publish.py` renders approved videos in HD and copies MP4, captions (.vtt) and a thumbnail into `docs/videos/`, then writes `docs/library.json`. `--skip-render` reuses existing HD renders; `--only <id>` updates one video.
+- Commit `docs/` and push; Pages updates in a minute or two.
+- Local preview: `python -m http.server 8765 --directory docs`, then open http://localhost:8765
+
 ## House style module
 
 New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). It sets up the gTTS voice and provides `apw_intro()`, a corner logo, `apw_outro()`, meaning colors (`STANDARD`, `IMPROVED`, `PROBLEM`, `REF_A`, `REF_B`), company colors (`APW_*`, taken from the Tool Tag Generator CSS), and the helpers `apw_title`, `step_label`, `bullets` and `reveal_bullets`. The logo is `assets/apw_logo.png`, a 1200px copy of `apw-logo-stacked-blue.png` from the American-Precision-Works repo with a transparent background.

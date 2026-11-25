@@ -1,0 +1,31 @@
+{
+  "videos": [
+    {
+      "id": "unjc-vs-unc",
+      "title": "UNJC vs UNC Threads",
+      "file": "unjc.py",
+      "scene": "UNJCvsUNC",
+      "topic": "Threads",
+      "description": "What the J means, why a controlled root radius matters, and how it changes internal thread dimensions and gauging.",
+      "status": "draft"
+    },
+    {
+      "id": "photolithography",
+      "title": "Photolithography",
+      "file": "photo.py",
+      "scene": "Photolithography",
+      "topic": "Processes",
+      "description": "Test video: the eight steps of printing a pattern onto a silicon wafer.",
+      "status": "approved"
+    },
+    {
+      "id": "house-style-demo",
+      "title": "APW House Style Demo",
+      "file": "style_demo.py",
+      "scene": "StyleDemo",
+      "topic": "About",
+      "description": "The intro, color meanings and layout used in every APW training video.",
+      "status": "approved"
+    }
+  ]
+}
