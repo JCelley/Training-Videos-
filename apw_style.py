@@ -10,7 +10,7 @@ Usage in a video file:
             ...
             self.apw_outro()
 
-APWScene sets up the gTTS voice, keeps a small logo in the bottom-right corner,
+APWScene sets up the narration voice (Piper, see make_voice), keeps a small logo in the bottom-right corner,
 and provides a standard intro and outro. Build titles, step labels and bullets
 with the helpers below so every video looks the same.
 """
@@ -22,6 +22,16 @@ from manim_voiceover.services.gtts import GTTSService
 
 ASSETS = Path(__file__).parent / "assets"
 LOGO_PATH = ASSETS / "apw_logo.png"
+
+# --- Narration voice ---------------------------------------------------------
+# Piper runs offline on this PC. Models live in voices/ (git-ignored); see piper_service.py
+# for the download command. If the model is missing, videos fall back to gTTS.
+VOICE_MODEL = Path(__file__).parent / "voices" / "en_GB-northern_english_male-medium.onnx"
+# Pace comes mostly from pauses, not stretched words: a length_scale much above 1.1 slurs.
+VOICE_PACE = 1.05      # Piper length_scale: above 1.0 speaks slower
+VOICE_NOISE = 0.3      # tone variation (voice default .5); lower is steadier
+VOICE_NOISE_W = 0.2    # timing variation (voice default .333); lower is crisper
+VOICE_GAP = 0.35       # seconds of silence after each sentence
 
 # --- Company colors (from the Tool Tag Generator's CSS variables) -----------
 APW_LOGO_BLUE = "#689DCC"  # sampled from apw-logo-stacked-blue.png
@@ -111,6 +121,20 @@ def show_callout(c):
     return AnimationGroup(FadeIn(c[0]), Create(c[1]), FadeIn(c[2], scale=0.5))
 
 
+def make_voice():
+    """House narration voice: Piper if its model is downloaded, otherwise gTTS."""
+    if VOICE_MODEL.exists():
+        try:
+            from piper_service import PiperService
+            return PiperService(VOICE_MODEL, length_scale=VOICE_PACE, noise_scale=VOICE_NOISE,
+                                noise_w_scale=VOICE_NOISE_W, sentence_silence=VOICE_GAP)
+        except ImportError:
+            logger.warning("piper-tts is not installed (pip install piper-tts); using gTTS instead.")
+    else:
+        logger.warning(f"Voice model {VOICE_MODEL.name} not found in voices/; using gTTS instead.")
+    return GTTSService()
+
+
 # --- Base scene -------------------------------------------------------------
 class APWScene(VoiceoverScene):
     """VoiceoverScene with APW voice, corner logo, intro and outro."""
@@ -121,7 +145,7 @@ class APWScene(VoiceoverScene):
     def setup(self):
         super().setup()
         self.camera.background_color = BACKGROUND
-        self.set_speech_service(GTTSService())
+        self.set_speech_service(make_voice())
         self.corner_logo = None
         self.header = None
         self.section_label = None

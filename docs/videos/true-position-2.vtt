@@ -1,0 +1,321 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:04.152
+True position, part two. Datums, and what position
+
+2
+00:00:04.252 --> 00:00:06.754
+controls with one, two or three of them.
+
+3
+00:00:09.466 --> 00:00:12.623
+Every basic dimension starts from a datum. But
+
+4
+00:00:12.723 --> 00:00:15.383
+a real surface is never perfectly flat.
+
+5
+00:00:15.483 --> 00:00:18.692
+So the datum isn't the surface itself. It's the perfect
+
+6
+00:00:18.792 --> 00:00:22.121
+plane of the inspection equipment the part rests on, like
+
+7
+00:00:22.221 --> 00:00:25.129
+a surface plate. The part sits on its high points.
+
+8
+00:00:25.216 --> 00:00:27.575
+On the print, a triangle and a lettered box mark
+
+9
+00:00:27.675 --> 00:00:30.598
+the surface the datum comes from, called the datum feature.
+
+10
+00:00:31.783 --> 00:00:35.543
+Start with position to just one datum. This hole goes straight
+
+11
+00:00:35.643 --> 00:00:38.594
+through face A, so datum A is square to the hole.
+
+12
+00:00:38.683 --> 00:00:41.260
+With only A in the frame, nothing ties the zone to
+
+13
+00:00:41.360 --> 00:00:43.990
+the edges of the part. The zone has to stand square
+
+14
+00:00:44.090 --> 00:00:46.667
+to A, but it's free to slide wherever the hole is.
+
+15
+00:00:46.766 --> 00:00:50.050
+To calculate it, measure the hole's axis at the top and at
+
+16
+00:00:50.150 --> 00:00:53.959
+the bottom. Here the top sits six thousandths over from the bottom.
+
+17
+00:00:54.059 --> 00:00:57.459
+The smallest zone that stays square to A and still holds the
+
+18
+00:00:57.559 --> 00:01:01.952
+axis is six thousandths across. Position is diameter six thousandths, a pass.
+
+19
+00:01:02.050 --> 00:01:04.855
+With a single hole, position to A alone only
+
+20
+00:01:04.955 --> 00:01:09.081
+controls tilt. It works exactly like a perpendicularity callout.
+
+21
+00:01:10.266 --> 00:01:13.122
+Position to A alone still matters for a pattern. Here
+
+22
+00:01:13.222 --> 00:01:16.467
+are four holes, with basic dimensions between the holes, and
+
+23
+00:01:16.567 --> 00:01:19.423
+the frame says four X, position ten thousandths to A.
+
+24
+00:01:19.516 --> 00:01:23.932
+The four zones are locked to each other at the basic spacing, like a rigid
+
+25
+00:01:24.032 --> 00:01:27.837
+gauge. But as a group, they can slide and turn to fit the holes.
+
+26
+00:01:27.933 --> 00:01:30.843
+So the callout controls the spacing between the holes and
+
+27
+00:01:30.943 --> 00:01:33.536
+keeps each one square to A. Where the whole pattern
+
+28
+00:01:33.636 --> 00:01:35.754
+sits on the plate isn't controlled at all.
+
+29
+00:01:36.950 --> 00:01:39.871
+Now a different part: a hole drilled sideways, parallel
+
+30
+00:01:39.971 --> 00:01:41.739
+to the bottom face A, one inch up.
+
+31
+00:01:41.833 --> 00:01:45.188
+Position to A locks the zone at exactly one inch above
+
+32
+00:01:45.288 --> 00:01:48.644
+A, and parallel to it. Side to side, nothing holds it.
+
+33
+00:01:48.733 --> 00:01:52.161
+To calculate it, measure the axis height above A at both ends
+
+34
+00:01:52.261 --> 00:01:55.748
+of the hole. Plus three thousandths at the front, minus two at
+
+35
+00:01:55.848 --> 00:01:59.855
+the back. Position is twice the worst end: diameter six thousandths. It
+
+36
+00:01:59.955 --> 00:02:03.036
+passes, and the hole is parallel to A within that zone.
+
+37
+00:02:03.133 --> 00:02:06.577
+Even if the hole were a quarter inch off sideways, this callout
+
+38
+00:02:06.677 --> 00:02:10.571
+would still pass it. To control that direction, you need another datum.
+
+39
+00:02:11.766 --> 00:02:15.305
+To fix a hole's location completely, the part has to be locked down
+
+40
+00:02:15.405 --> 00:02:18.727
+in all six ways it can move: three slides, and three rotations.
+
+41
+00:02:18.816 --> 00:02:21.519
+Datum A is primary. The part sits down on the
+
+42
+00:02:21.619 --> 00:02:25.132
+surface plate and touches at least three high points. That
+
+43
+00:02:25.232 --> 00:02:27.998
+stops it sliding down, and tilting either way.
+
+44
+00:02:28.083 --> 00:02:32.120
+Datum B is secondary. The part slides against the B wall and
+
+45
+00:02:32.220 --> 00:02:36.533
+touches at least two points. That stops one slide, and the spin.
+
+46
+00:02:36.616 --> 00:02:41.619
+Datum C is tertiary. The part slides over until it touches the C
+
+47
+00:02:41.719 --> 00:02:46.960
+wall at one point. That stops the last slide. Now nothing can move.
+
+48
+00:02:47.050 --> 00:02:50.489
+Three points, then two, then one. That's why it's called
+
+49
+00:02:50.589 --> 00:02:54.029
+three, two, one. The datum reference frame is now fixed,
+
+50
+00:02:54.129 --> 00:02:56.684
+and true position has an exact home in it.
+
+51
+00:02:57.883 --> 00:03:01.084
+Back to the top view, with the part locked against B and
+
+52
+00:03:01.184 --> 00:03:04.799
+C. Each coordinate is measured straight out from its own datum.
+
+53
+00:03:04.883 --> 00:03:08.528
+The error from datum B is plus two thousandths in X. The
+
+54
+00:03:08.628 --> 00:03:12.540
+error from datum C is plus one thousandth in Y. Combine them
+
+55
+00:03:12.640 --> 00:03:17.154
+with the formula, and position is forty-five ten-thousandths. A pass.
+
+56
+00:03:17.250 --> 00:03:20.353
+Datum A keeps the zone square to the face. Datums
+
+57
+00:03:20.453 --> 00:03:23.295
+B and C each give one direction of the error.
+
+58
+00:03:24.483 --> 00:03:27.915
+Datum order matters whenever the datum features aren't perfectly
+
+59
+00:03:28.015 --> 00:03:30.233
+square to each other. On this part, edge C
+
+60
+00:03:30.333 --> 00:03:32.606
+is ten thousandths out of square to edge B.
+
+61
+00:03:32.700 --> 00:03:35.462
+With B before C, the part is squared up to edge
+
+62
+00:03:35.562 --> 00:03:38.386
+B with two points, and C only touches at its low
+
+63
+00:03:38.486 --> 00:03:43.077
+corner. Measured that way, position is forty-five ten-thousandths. It passes.
+
+64
+00:03:43.166 --> 00:03:46.259
+Now swap them: C before B. The part is squared up to
+
+65
+00:03:46.359 --> 00:03:50.433
+the crooked edge C instead, and the whole measuring frame turns with
+
+66
+00:03:50.533 --> 00:03:54.731
+it. Same hole, but now delta X is about fifty-one ten-thousandths, and
+
+67
+00:03:54.831 --> 00:03:58.108
+position comes out at about 11.6 thousandths. It fails.
+
+68
+00:03:58.200 --> 00:04:02.080
+Same part, same hole, two different answers. Always set the part
+
+69
+00:04:02.180 --> 00:04:05.127
+up in the exact order the frame lists the datums.
+
+70
+00:04:06.316 --> 00:04:09.385
+Both editions of A S M E Y fourteen point five use
+
+71
+00:04:09.485 --> 00:04:13.123
+these same datum ideas. Most of our prints call out the two
+
+72
+00:04:13.223 --> 00:04:17.622
+thousand nine edition. One difference shows up when a datum face rocks.
+
+73
+00:04:17.716 --> 00:04:20.864
+Under two thousand nine, a rocking face can leave a choice of
+
+74
+00:04:20.964 --> 00:04:25.018
+candidate datums. The two thousand eighteen edition settles it by default: the
+
+75
+00:04:25.118 --> 00:04:28.426
+part is adjusted to a single solution that minimizes the gap. It
+
+76
+00:04:28.526 --> 00:04:32.366
+also renames the perfect theoretical gauge the true geometric counterpart.
+
+77
+00:04:32.450 --> 00:04:34.637
+Always check the title block or notes to
+
+78
+00:04:34.737 --> 00:04:36.809
+see which edition the print calls out.
+
+79
+00:04:37.500 --> 00:04:40.913
+Next, in part three, we go into three D. The tolerance
+
+80
+00:04:41.013 --> 00:04:44.427
+zone is really a cylinder, and the hole's tilt counts.

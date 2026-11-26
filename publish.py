@@ -44,10 +44,51 @@ def srt_to_vtt(srt_text):
     return "WEBVTT\n\n" + body.strip() + "\n"
 
 
+# ffmpeg is used when it is on PATH; otherwise PyAV (installed with Manim) does the same jobs.
+HAVE_FFMPEG = shutil.which("ffmpeg") is not None and shutil.which("ffprobe") is not None
+
+
 def duration_seconds(mp4):
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                          "-of", "csv=p=0", str(mp4)], capture_output=True, text=True, check=True)
-    return int(float(out.stdout.strip()))  # round down, like the browser's player does
+    if HAVE_FFMPEG:
+        out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                              "-of", "csv=p=0", str(mp4)], capture_output=True, text=True, check=True)
+        return int(float(out.stdout.strip()))  # round down, like the browser's player does
+    import av
+    with av.open(str(mp4)) as c:
+        return int(c.duration / 1_000_000)
+
+
+def remux_faststart(src, dest):
+    """Copy the streams unchanged, with the index at the front so the browser can start playing at once."""
+    if HAVE_FFMPEG:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-c", "copy",
+                        "-movflags", "+faststart", str(dest)], check=True)
+        return
+    import av
+    with av.open(str(src)) as inp, av.open(str(dest), "w", options={"movflags": "faststart"}) as out:
+        streams = {s.index: out.add_stream_from_template(s) for s in inp.streams if s.type in ("video", "audio")}
+        for packet in inp.demux(*[inp.streams[i] for i in streams]):
+            if packet.dts is None:
+                continue
+            packet.stream = streams[packet.stream.index]
+            out.mux(packet)
+
+
+def thumbnail(mp4, at_seconds, dest):
+    if HAVE_FFMPEG:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(at_seconds), "-i", str(mp4),
+                        "-frames:v", "1", "-vf", "scale=640:-1", "-q:v", "4", str(dest)], check=True)
+        return
+    import av
+    with av.open(str(mp4)) as c:
+        v = c.streams.video[0]
+        c.seek(int(at_seconds / v.time_base), stream=v)
+        for frame in c.decode(v):
+            if frame.time is not None and frame.time >= at_seconds:
+                break
+        img = frame.to_image()
+    img.thumbnail((640, 640))
+    img.save(dest, quality=85)
 
 
 def publish(entry):
@@ -57,13 +98,9 @@ def publish(entry):
                          f"Run without --skip-render, or: python -m manim -qh {entry['file']} {entry['scene']}")
     vid = entry["id"]
     dest = OUT / f"{vid}.mp4"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp4), "-c", "copy",
-                    "-movflags", "+faststart", str(dest)], check=True)
+    remux_faststart(mp4, dest)
     dur = duration_seconds(dest)
-    # Thumbnail from about 40% in, past the intro.
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(dur * 0.4), "-i", str(dest),
-                    "-frames:v", "1", "-vf", "scale=640:-1", "-q:v", "4", str(OUT / f"{vid}.jpg")],
-                   check=True)
+    thumbnail(dest, dur * 0.4, OUT / f"{vid}.jpg")  # about 40% in, past the intro
     captions = None
     if srt.exists():
         (OUT / f"{vid}.vtt").write_text(srt_to_vtt(srt.read_text(encoding="utf-8")), encoding="utf-8")

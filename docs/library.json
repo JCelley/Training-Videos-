@@ -5,7 +5,7 @@
       "title": "UNJC vs UNC Threads",
       "topic": "Threads",
       "description": "Thread sections showing the UNJ root radius, why a standard UNC minor diameter interferes with it, how UNJC internal threads are gauged, and min minor diameters for every size.",
-      "duration": 138,
+      "duration": 117,
       "video": "videos/unjc-vs-unc.mp4",
       "poster": "videos/unjc-vs-unc.jpg",
       "captions": "videos/unjc-vs-unc.vtt"
@@ -29,6 +29,56 @@
       "video": "videos/house-style-demo.mp4",
       "poster": "videos/house-style-demo.jpg",
       "captions": "videos/house-style-demo.vtt"
+    },
+    {
+      "id": "true-position-1",
+      "title": "True Position 1: What Position Means",
+      "topic": "GD&T",
+      "description": "Basic dimensions and true position, square \u00b1 zones vs round position zones, reading the feature control frame, and calculating position as 2 \u00d7 \u221a(\u0394x\u00b2 + \u0394y\u00b2).",
+      "duration": 220,
+      "video": "videos/true-position-1.mp4",
+      "poster": "videos/true-position-1.jpg",
+      "captions": "videos/true-position-1.vtt"
+    },
+    {
+      "id": "true-position-2",
+      "title": "True Position 2: Datums",
+      "topic": "GD&T",
+      "description": "Position to one datum square to the hole, to one datum parallel to it, and to three datums (3-2-1). Error from each datum, and why datum order changes the answer. 2009 vs 2018 datum terms.",
+      "duration": 288,
+      "video": "videos/true-position-2.mp4",
+      "poster": "videos/true-position-2.jpg",
+      "captions": "videos/true-position-2.vtt"
+    },
+    {
+      "id": "true-position-3",
+      "title": "True Position 3: Into 3D",
+      "topic": "GD&T",
+      "description": "The cylindrical zone through the hole's depth, tilted holes and the worst-end check, how position limits perpendicularity, width zones without \u00d8, and coaxial position now that 2018 dropped concentricity.",
+      "duration": 179,
+      "video": "videos/true-position-3.mp4",
+      "poster": "videos/true-position-3.jpg",
+      "captions": "videos/true-position-3.vtt"
+    },
+    {
+      "id": "true-position-4",
+      "title": "True Position 4: MMC, LMC and Bonus Tolerance",
+      "topic": "GD&T",
+      "description": "MMC, LMC and RFS, bonus tolerance with a worked example, virtual condition and functional gauges, LMC wall protection, zero position at MMC, and datum shift at MMB.",
+      "duration": 269,
+      "video": "videos/true-position-4.mp4",
+      "poster": "videos/true-position-4.jpg",
+      "captions": "videos/true-position-4.vtt"
+    },
+    {
+      "id": "true-position-5",
+      "title": "True Position 5: Threaded Holes",
+      "topic": "GD&T",
+      "description": "Pitch-diameter default and MAJOR/MINOR DIA notes, measuring with gauge pins, drill vs tap axis, projected tolerance zones, MMC on threads, and the fixed and floating fastener formulas.",
+      "duration": 237,
+      "video": "videos/true-position-5.mp4",
+      "poster": "videos/true-position-5.jpg",
+      "captions": "videos/true-position-5.vtt"
     }
   ]
 }

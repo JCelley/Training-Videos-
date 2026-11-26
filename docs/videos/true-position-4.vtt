@@ -1,0 +1,293 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:06.162
+True position, part four. Material modifiers, and bonus tolerance.
+
+2
+00:00:08.866 --> 00:00:10.950
+This hole can be anywhere from five hundred
+
+3
+00:00:11.050 --> 00:00:12.982
+to five oh five thousandths in diameter.
+
+4
+00:00:13.066 --> 00:00:19.000
+At its smallest, the most metal is left on the part. That's maximum material condition,
+
+5
+00:00:19.100 --> 00:00:22.399
+or M M C. For a hole, M M C is the smallest size.
+
+6
+00:00:22.483 --> 00:00:26.711
+At its largest, the least metal is left. That's least material
+
+7
+00:00:26.811 --> 00:00:30.480
+condition, L M C. For a hole, that's the biggest size.
+
+8
+00:00:30.566 --> 00:00:33.247
+For a pin or a shaft, it's the other way around: M
+
+9
+00:00:33.347 --> 00:00:36.528
+M C is the largest pin, because that leaves the most metal.
+
+10
+00:00:37.716 --> 00:00:42.192
+With no modifier in the frame, the tolerance applies regardless of feature
+
+11
+00:00:42.292 --> 00:00:46.025
+size, called R F S. Under rule number two, that's the default.
+
+12
+00:00:46.116 --> 00:00:48.778
+Make the hole bigger or smaller, and the
+
+13
+00:00:48.878 --> 00:00:52.161
+zone doesn't change. It's always ten thousandths.
+
+14
+00:00:52.250 --> 00:00:55.067
+On a chart of allowed position against hole
+
+15
+00:00:55.167 --> 00:00:56.900
+size, R F S is a flat line.
+
+16
+00:00:57.500 --> 00:01:01.604
+Now add the M M C modifier: a circled M after the tolerance.
+
+17
+00:01:01.700 --> 00:01:05.248
+At M M C, five hundred, the zone is ten thousandths. As
+
+18
+00:01:05.348 --> 00:01:08.499
+the hole grows away from M M C, the zone grows by
+
+19
+00:01:08.599 --> 00:01:12.878
+the same amount. At five oh five, the zone is fifteen thousandths.
+
+20
+00:01:12.966 --> 00:01:16.765
+The extra is called bonus tolerance. Bonus equals the
+
+21
+00:01:16.865 --> 00:01:19.561
+actual hole size minus the M M C size.
+
+22
+00:01:19.661 --> 00:01:23.680
+Allowed position is the stated tolerance plus the bonus.
+
+23
+00:01:24.566 --> 00:01:28.023
+A real part. The hole measures five oh three five.
+
+24
+00:01:28.123 --> 00:01:32.861
+Delta X is five thousandths, delta Y is thirty-five ten-thousandths.
+
+25
+00:01:32.961 --> 00:01:36.489
+Position comes out to twelve point two thousandths.
+
+26
+00:01:36.583 --> 00:01:39.680
+Under R F S, that fails: twelve point two is more
+
+27
+00:01:39.780 --> 00:01:42.748
+than ten. But at M M C, the hole is thirty-five
+
+28
+00:01:42.848 --> 00:01:46.924
+ten-thousandths bigger than M M C. That's the bonus. The allowed
+
+29
+00:01:47.024 --> 00:01:50.839
+zone is thirteen point five thousandths, so the part passes.
+
+30
+00:01:50.933 --> 00:01:53.888
+Always measure the actual size of the hole first.
+
+31
+00:01:53.988 --> 00:01:56.444
+Without it, you can't work out the bonus.
+
+32
+00:01:57.633 --> 00:02:01.470
+Why is that bonus safe? Take the smallest hole, five hundred, and
+
+33
+00:02:01.570 --> 00:02:06.317
+the largest position error allowed at that size, ten thousandths. The worst-case
+
+34
+00:02:06.417 --> 00:02:09.891
+space left inside is a perfect pin four ninety in diameter.
+
+35
+00:02:09.983 --> 00:02:13.555
+That boundary is called the virtual condition. It's the
+
+36
+00:02:13.655 --> 00:02:16.225
+M M C size minus the position tolerance.
+
+37
+00:02:16.316 --> 00:02:19.139
+Now make the hole bigger. A five oh five hole can
+
+38
+00:02:19.239 --> 00:02:22.600
+move seven and a half thousandths off center, and it still
+
+39
+00:02:22.700 --> 00:02:26.299
+clears the same pin. That extra movement is exactly the bonus.
+
+40
+00:02:26.383 --> 00:02:28.268
+This is the M M C idea. As long as
+
+41
+00:02:28.368 --> 00:02:31.771
+the hole's surface never crosses the four ninety boundary at
+
+42
+00:02:31.871 --> 00:02:34.982
+true position, a fastener of that size will always fit.
+
+43
+00:02:36.166 --> 00:02:40.174
+That's why a functional gauge works. It has the datum surfaces, and
+
+44
+00:02:40.274 --> 00:02:43.976
+a pin at the virtual condition size, sitting at true position.
+
+45
+00:02:44.066 --> 00:02:46.663
+If the part drops onto the gauge, seated on the
+
+46
+00:02:46.763 --> 00:02:50.508
+datums, position is good, with all the bonus counted automatically.
+
+47
+00:02:50.608 --> 00:02:52.689
+Gauges like this only work with M M C.
+
+48
+00:02:53.883 --> 00:02:57.084
+The opposite modifier is L M C, a circled L. It's used
+
+49
+00:02:57.184 --> 00:03:00.508
+to protect a minimum wall, like a hole close to an edge.
+
+50
+00:03:00.600 --> 00:03:04.414
+Now the bonus goes the other way. The zone is ten thousandths at
+
+51
+00:03:04.514 --> 00:03:08.084
+L M C, the largest hole, and grows as the hole gets smaller.
+
+52
+00:03:08.183 --> 00:03:11.694
+Watch the minimum wall while the hole changes size, with the
+
+53
+00:03:11.794 --> 00:03:14.943
+hole pushed to the edge of its zone. It never changes.
+
+54
+00:03:15.043 --> 00:03:17.411
+L M C guarantees the wall, at every size.
+
+55
+00:03:18.600 --> 00:03:22.070
+Some prints use zero position tolerance at M M C. Here's our
+
+56
+00:03:22.170 --> 00:03:25.223
+hole the normal way, and the same hole with zero at M
+
+57
+00:03:25.323 --> 00:03:28.139
+M C, and the size range opened up to four ninety.
+
+58
+00:03:28.233 --> 00:03:32.518
+Both have the same virtual condition, four ninety, so the same gauge and the
+
+59
+00:03:32.618 --> 00:03:36.556
+same fit. On the chart, it's the same line, just extended down to four
+
+60
+00:03:36.656 --> 00:03:40.422
+ninety. Zero at M M C accepts a small hole that's dead on location,
+
+61
+00:03:40.522 --> 00:03:44.057
+and a big hole that's further off. It gives the shop more room.
+
+62
+00:03:45.250 --> 00:03:49.331
+A circled M can also follow a datum letter. Here, four holes
+
+63
+00:03:49.431 --> 00:03:52.815
+are located from datum B, a center bore, at M M B.
+
+64
+00:03:52.900 --> 00:03:56.433
+The gauge pin for B is made at the bore's maximum material boundary.
+
+65
+00:03:56.533 --> 00:03:59.746
+When the actual bore is bigger, the part can shift on the pin.
+
+66
+00:03:59.833 --> 00:04:03.746
+That's called datum shift. The whole pattern moves together, so it
+
+67
+00:04:03.846 --> 00:04:06.847
+isn't extra tolerance on each hole by itself. C M M
+
+68
+00:04:06.947 --> 00:04:10.860
+software has to fit the pattern within the shift that's available.
+
+69
+00:04:10.950 --> 00:04:13.532
+The two thousand nine standard calls it M M
+
+70
+00:04:13.632 --> 00:04:17.711
+B, maximum material boundary. On older nineteen ninety-four prints,
+
+71
+00:04:17.811 --> 00:04:19.769
+the same symbol was called M M C.
+
+72
+00:04:20.466 --> 00:04:22.727
+Next, in part five: threaded holes, and
+
+73
+00:04:22.827 --> 00:04:25.209
+the complications they bring to position.

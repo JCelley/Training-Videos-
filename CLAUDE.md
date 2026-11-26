@@ -4,11 +4,11 @@ Narrated training videos for American Precision Works (APW), a precision CNC mac
 
 ## Environment
 
-- Windows, PowerShell, Python 3.11
+- Windows, PowerShell, Python 3.12 (Manim 0.22)
 - The `py` launcher is NOT installed. Always use `python -m ...`
 - FFmpeg installed via winget
-- Packages: `manim`, `manim-voiceover[gtts]`
-- gTTS needs an internet connection while rendering
+- Packages: `manim`, `manim-voiceover[gtts]`, `piper-tts`
+- Narration voice: Piper `en_GB-northern_english_male-medium`, offline, via `piper_service.py`. Models live in `voices/` (git-ignored); on a new PC run `python -m piper.download_voices --download-dir voices en_GB-northern_english_male-medium`. Without the model, `APWScene` falls back to gTTS (needs internet). Voice and pace are set by `VOICE_MODEL` / `VOICE_PACE` in `apw_style.py`.
 
 ## Rendering
 
@@ -24,6 +24,13 @@ Narrated training videos for American Precision Works (APW), a precision CNC mac
 | `photo.py` | `Photolithography` | Test video: photolithography process, 8 steps |
 | `unjc.py` | `UNJCvsUNC` | UNJC vs UNC threads, focused on internal thread dimensions |
 | `style_demo.py` | `StyleDemo` | Check that the house style renders |
+| `tp1_basics.py` | `TP1Basics` | True position 1/5: basics, square vs round zone, the formula |
+| `tp2_datums.py` | `TP2Datums` | True position 2/5: one, two, three datums, datum order |
+| `tp3_3d.py` | `TP3ThreeD` | True position 3/5: cylindrical zone, tilt, width zones, coaxial |
+| `tp4_modifiers.py` | `TP4Modifiers` | True position 4/5: MMC, LMC, bonus, virtual condition, datum shift |
+| `tp5_threads.py` | `TP5Threads` | True position 5/5: threaded holes, projected zones, fastener formulas |
+
+The true position series shares helpers in `tp_common.py` (FCF builder, GD&T symbols, dimensions, simple 3D projection). Its sources and open fact-check items are in `notes/true_position_sources.md`; John approved and published the five entries on 2026-11-25 with those fact-check items still open.
 
 ## Video library (GitHub Pages)
 
@@ -37,7 +44,7 @@ The repo is public, so the Pages site is public. `docs/` is the site, served by 
 
 ## House style module
 
-New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). It sets up the gTTS voice and provides `apw_intro()`, a corner logo, `apw_outro()`, meaning colors (`STANDARD`, `IMPROVED`, `PROBLEM`, `REF_A`, `REF_B`), company colors (`APW_*`, taken from the Tool Tag Generator CSS), and the helpers `apw_title`, `step_label`, `bullets` and `reveal_bullets`. The logo is `assets/apw_logo.png`, a 1200px copy of `apw-logo-stacked-blue.png` from the American-Precision-Works repo with a transparent background.
+New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). It sets up the narration voice (`make_voice()`) and provides `apw_intro()`, a corner logo, `apw_outro()`, meaning colors (`STANDARD`, `IMPROVED`, `PROBLEM`, `REF_A`, `REF_B`), company colors (`APW_*`, taken from the Tool Tag Generator CSS), and the helpers `apw_title`, `step_label`, `bullets` and `reveal_bullets`. The logo is `assets/apw_logo.png`, a 1200px copy of `apw-logo-stacked-blue.png` from the American-Precision-Works repo with a transparent background.
 
 ## Planned topics
 
@@ -68,7 +75,7 @@ New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). 
 ## To do
 
 - Move `photo.py` and `unjc.py` onto `APWScene` from `apw_style.py`
-- Optionally swap gTTS for a better voice, or John's own recorded narration
+- Optionally replace the Piper voice with John's own recorded narration (manim-voiceover's RecorderService)
 
 ## Accuracy
 

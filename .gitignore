@@ -11,3 +11,9 @@ venv/
 Thumbs.db
 desktop.ini
 .vscode/
+
+# API keys for the narration voice (never commit)
+.env
+
+# Piper voice models (large downloads)
+voices/

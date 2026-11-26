@@ -26,6 +26,51 @@
       "topic": "About",
       "description": "The intro, color meanings and layout used in every APW training video.",
       "status": "approved"
+    },
+    {
+      "id": "true-position-1",
+      "title": "True Position 1: What Position Means",
+      "file": "tp1_basics.py",
+      "scene": "TP1Basics",
+      "topic": "GD&T",
+      "description": "Basic dimensions and true position, square ± zones vs round position zones, reading the feature control frame, and calculating position as 2 × √(Δx² + Δy²).",
+      "status": "approved"
+    },
+    {
+      "id": "true-position-2",
+      "title": "True Position 2: Datums",
+      "file": "tp2_datums.py",
+      "scene": "TP2Datums",
+      "topic": "GD&T",
+      "description": "Position to one datum square to the hole, to one datum parallel to it, and to three datums (3-2-1). Error from each datum, and why datum order changes the answer. 2009 vs 2018 datum terms.",
+      "status": "approved"
+    },
+    {
+      "id": "true-position-3",
+      "title": "True Position 3: Into 3D",
+      "file": "tp3_3d.py",
+      "scene": "TP3ThreeD",
+      "topic": "GD&T",
+      "description": "The cylindrical zone through the hole's depth, tilted holes and the worst-end check, how position limits perpendicularity, width zones without Ø, and coaxial position now that 2018 dropped concentricity.",
+      "status": "approved"
+    },
+    {
+      "id": "true-position-4",
+      "title": "True Position 4: MMC, LMC and Bonus Tolerance",
+      "file": "tp4_modifiers.py",
+      "scene": "TP4Modifiers",
+      "topic": "GD&T",
+      "description": "MMC, LMC and RFS, bonus tolerance with a worked example, virtual condition and functional gauges, LMC wall protection, zero position at MMC, and datum shift at MMB.",
+      "status": "approved"
+    },
+    {
+      "id": "true-position-5",
+      "title": "True Position 5: Threaded Holes",
+      "file": "tp5_threads.py",
+      "scene": "TP5Threads",
+      "topic": "GD&T",
+      "description": "Pitch-diameter default and MAJOR/MINOR DIA notes, measuring with gauge pins, drill vs tap axis, projected tolerance zones, MMC on threads, and the fixed and floating fastener formulas.",
+      "status": "approved"
     }
   ]
 }
