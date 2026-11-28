@@ -5,7 +5,10 @@ media/
 __pycache__/
 *.pyc
 .venv/
+.venv-chatterbox/
 venv/
+chatterbox_test.wav
+voice_test*.wav
 
 # OS / editor
 Thumbs.db

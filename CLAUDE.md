@@ -8,7 +8,8 @@ Narrated training videos for American Precision Works (APW), a precision CNC mac
 - The `py` launcher is NOT installed. Always use `python -m ...`
 - FFmpeg installed via winget
 - Packages: `manim`, `manim-voiceover[gtts]`, `piper-tts`
-- Narration voice: Piper `en_GB-northern_english_male-medium`, offline, via `piper_service.py`. Models live in `voices/` (git-ignored); on a new PC run `python -m piper.download_voices --download-dir voices en_GB-northern_english_male-medium`. Without the model, `APWScene` falls back to gTTS (needs internet). Voice and pace are set by `VOICE_MODEL` / `VOICE_PACE` in `apw_style.py`.
+- Narration voice: Chatterbox, cloned from `voices/john_sample.wav` (10-20 s of John speaking, git-ignored), via `chatterbox_service.py`. Chatterbox needs numpy<2 / torch 2.6, so it runs in its own venv `.venv-chatterbox` (setup commands in `chatterbox_service.py`) as a worker process (`chatterbox_worker.py`); the Manim env is untouched. Tuning: `CLONE_*` in `apw_style.py`. Without the sample or venv, `APWScene` falls back to Piper.
+- Fallback voice: Piper `en_GB-northern_english_male-medium`, offline, via `piper_service.py`. Models live in `voices/` (git-ignored); on a new PC run `python -m piper.download_voices --download-dir voices en_GB-northern_english_male-medium`. Without the model, `APWScene` falls back to gTTS (needs internet). Voice and pace are set by `VOICE_MODEL` / `VOICE_PACE` in `apw_style.py`.
 
 ## Rendering
 
@@ -75,7 +76,6 @@ New videos subclass `APWScene` from `apw_style.py` (`from apw_style import *`). 
 ## To do
 
 - Move `photo.py` and `unjc.py` onto `APWScene` from `apw_style.py`
-- Optionally replace the Piper voice with John's own recorded narration (manim-voiceover's RecorderService)
 
 ## Accuracy
 

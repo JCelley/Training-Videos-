@@ -1,249 +1,249 @@
 WEBVTT
 
 1
-00:00:01.000 --> 00:00:05.733
+00:00:01.000 --> 00:00:06.760
 True position, part one. What position means, and how to calculate it.
 
 2
-00:00:08.433 --> 00:00:11.451
+00:00:09.466 --> 00:00:12.900
 Here's a simple plate with one drilled hole. The print
 
 3
-00:00:11.551 --> 00:00:14.280
+00:00:13.000 --> 00:00:16.106
 has to say where the center of that hole belongs.
 
 4
-00:00:14.366 --> 00:00:18.189
+00:00:16.200 --> 00:00:20.224
 These dimensions are basic. The box around the number means
 
 5
-00:00:18.289 --> 00:00:21.514
+00:00:20.324 --> 00:00:23.720
 it's exact, with no plus or minus tolerance on it.
 
 6
-00:00:21.600 --> 00:00:24.277
+00:00:23.816 --> 00:00:27.650
 Together they define a point called true position: the
 
 7
-00:00:24.377 --> 00:00:26.540
+00:00:27.750 --> 00:00:30.856
 exact spot where the hole is supposed to be.
 
 8
-00:00:26.633 --> 00:00:29.457
+00:00:30.950 --> 00:00:34.240
 On the print, this control is just called position.
 
 9
-00:00:29.557 --> 00:00:32.724
+00:00:34.340 --> 00:00:38.030
 True position is the perfect location it's measured from.
 
 10
-00:00:32.816 --> 00:00:36.103
+00:00:38.116 --> 00:00:41.900
 No real hole lands exactly on that point. The question is
 
 11
-00:00:36.203 --> 00:00:39.430
+00:00:42.000 --> 00:00:45.716
 how far off it's allowed to be, and in which directions.
 
 12
-00:00:39.516 --> 00:00:42.007
+00:00:45.816 --> 00:00:48.726
 Let's zoom way in on true position.
 
 13
-00:00:42.100 --> 00:00:46.605
+00:00:48.816 --> 00:00:54.170
 With old-style plus or minus dimensions, say plus or minus five thousandths in
 
 14
-00:00:46.705 --> 00:00:49.675
+00:00:54.270 --> 00:00:57.806
 X and in Y, the hole center has to land in a square.
 
 15
-00:00:49.766 --> 00:00:52.171
+00:00:57.900 --> 00:01:00.601
 A hole five thousandths off in X and five in
 
 16
-00:00:52.271 --> 00:00:54.904
+00:01:00.701 --> 00:01:03.656
 Y sits in the corner and passes. But that corner
 
 17
-00:00:55.004 --> 00:00:58.377
+00:01:03.756 --> 00:01:07.540
 is about seventy-one ten-thousandths away from true position.
 
 18
-00:00:58.466 --> 00:01:02.366
+00:01:07.633 --> 00:01:11.912
 A hole only six thousandths off, straight sideways, falls outside the square
 
 19
-00:01:02.466 --> 00:01:05.682
+00:01:12.012 --> 00:01:15.543
 and gets rejected, even though it's closer to where it belongs.
 
 20
-00:01:05.766 --> 00:01:08.650
+00:01:15.633 --> 00:01:19.072
 A round zone treats every direction the same. A circle
 
 21
-00:01:08.750 --> 00:01:12.517
+00:01:19.172 --> 00:01:23.661
 through the square's corners is fourteen thousandths across, and gives
 
 22
-00:01:12.617 --> 00:01:15.225
+00:01:23.761 --> 00:01:26.873
 about fifty-seven percent more area to work with.
 
 23
-00:01:15.316 --> 00:01:19.217
+00:01:26.966 --> 00:01:32.074
 That's position: a round tolerance zone centered on true position. On
 
 24
-00:01:19.317 --> 00:01:23.045
+00:01:32.174 --> 00:01:37.056
 this print, the designer chose a zone ten thousandths in diameter.
 
 25
-00:01:23.133 --> 00:01:25.227
+00:01:37.150 --> 00:01:39.742
 On the print, position is called out in
 
 26
-00:01:25.327 --> 00:01:27.702
+00:01:39.842 --> 00:01:42.780
 a feature control frame, read left to right.
 
 27
-00:01:27.800 --> 00:01:30.181
+00:01:42.866 --> 00:01:45.626
 The first box holds the position symbol:
 
 28
-00:01:30.281 --> 00:01:32.229
+00:01:45.726 --> 00:01:47.986
 a circle with a cross through it.
 
 29
-00:01:32.316 --> 00:01:35.956
+00:01:48.083 --> 00:01:52.149
 Next is the tolerance. The diameter symbol in front of
 
 30
-00:01:36.056 --> 00:01:39.487
+00:01:52.249 --> 00:01:56.083
 it means the zone is round, ten thousandths across.
 
 31
-00:01:39.583 --> 00:01:43.656
+00:01:56.183 --> 00:02:01.609
 Then the datums, in order: A, B and C. They're the surfaces
 
 32
-00:01:43.756 --> 00:01:48.184
+00:02:01.709 --> 00:02:07.603
 the basic dimensions start from. Part two covers them in detail.
 
 33
-00:01:48.283 --> 00:01:50.741
+00:02:07.700 --> 00:02:11.157
 So the whole frame reads: the axis of this hole
 
 34
-00:01:50.841 --> 00:01:54.278
+00:02:11.257 --> 00:02:16.076
 must lie inside a ten-thousandths diameter zone, centered on true
 
 35
-00:01:54.378 --> 00:01:56.509
+00:02:16.176 --> 00:02:19.180
 position, located from datums A, B and C.
 
 36
-00:01:56.600 --> 00:01:58.649
+00:02:19.266 --> 00:02:21.856
 Now let's check a real part.
 
 37
-00:01:58.733 --> 00:02:02.622
+00:02:21.950 --> 00:02:26.911
 The C M M measures the hole's center: X is one point five oh three
 
 38
-00:02:02.722 --> 00:02:06.309
+00:02:27.011 --> 00:02:31.590
 from datum B, and Y is one point two four eight from datum C.
 
 39
-00:02:06.400 --> 00:02:09.949
+00:02:31.683 --> 00:02:35.475
 Subtract the basic values. Delta X is plus
 
 40
-00:02:10.049 --> 00:02:14.466
+00:02:35.575 --> 00:02:40.293
 three thousandths. Delta Y is minus two thousandths.
 
 41
-00:02:14.566 --> 00:02:18.592
+00:02:40.383 --> 00:02:44.804
 The straight-line distance from true position is the square root of
 
 42
-00:02:18.692 --> 00:02:23.026
+00:02:44.904 --> 00:02:49.663
 delta X squared plus delta Y squared. That's thirty-six ten-thousandths.
 
 43
-00:02:23.116 --> 00:02:26.379
+00:02:49.750 --> 00:02:53.326
 The zone is a diameter, so double it. Position is
 
 44
-00:02:26.479 --> 00:02:32.007
+00:02:53.426 --> 00:02:59.480
 seventy-two ten-thousandths, inside the ten thousandths allowed. This hole passes.
 
 45
-00:02:32.100 --> 00:02:35.280
+00:02:59.566 --> 00:03:03.165
 That's the formula to remember: two times the square
 
 46
-00:02:35.380 --> 00:02:38.120
+00:03:03.265 --> 00:03:06.366
 root of delta X squared plus delta Y squared.
 
 47
-00:02:38.216 --> 00:02:40.472
+00:03:06.450 --> 00:03:08.854
 A second part. Delta X is four
 
 48
-00:02:40.572 --> 00:02:44.006
+00:03:08.954 --> 00:03:12.610
 thousandths, and delta Y is four thousandths.
 
 49
-00:02:44.100 --> 00:02:46.671
+00:03:12.700 --> 00:03:15.810
 Each one alone would pass a plus or minus
 
 50
-00:02:46.771 --> 00:02:50.777
+00:03:15.910 --> 00:03:20.744
 five thousandths check. But together, the center is fifty-seven
 
 51
-00:02:50.877 --> 00:02:55.208
+00:03:20.844 --> 00:03:26.069
 ten-thousandths away, so position is eleven point three thousandths.
 
 52
-00:02:55.308 --> 00:02:57.880
+00:03:26.169 --> 00:03:29.280
 That's outside the zone. This hole fails.
 
 53
-00:02:57.966 --> 00:03:01.467
+00:03:29.366 --> 00:03:33.747
 A common mistake is reporting the radial distance, fifty-seven
 
 54
-00:03:01.567 --> 00:03:04.777
+00:03:33.847 --> 00:03:37.867
 ten-thousandths, as the position. The zone is a diameter,
 
 55
-00:03:04.877 --> 00:03:07.041
+00:03:37.967 --> 00:03:40.686
 so always double it before you compare.
 
 56
-00:03:08.233 --> 00:03:11.814
+00:03:41.883 --> 00:03:46.247
 Plot the hole centers from a batch of parts, and the zone shows
 
 57
-00:03:11.914 --> 00:03:15.671
+00:03:46.347 --> 00:03:50.923
 you the story at a glance. Green dots are inside, red are outside.
 
 58
-00:03:15.766 --> 00:03:19.585
+00:03:51.016 --> 00:03:55.468
 Notice the whole group sits off to one side. When the scatter is
 
 59
-00:03:19.685 --> 00:03:23.565
+00:03:55.568 --> 00:04:00.092
 shifted like this, look for a work offset or setup problem, not a
 
 60
-00:03:23.665 --> 00:03:27.606
+00:04:00.192 --> 00:04:04.786
 bad spindle. Shift the group back to center and every part passes.
 
 61
-00:03:28.300 --> 00:03:32.579
+00:04:05.483 --> 00:04:10.954
 Next, in part two: datums. What position controls when you reference one,
 
 62
-00:03:32.679 --> 00:03:36.179
+00:04:11.054 --> 00:04:15.533
 two or three datums, and why their order changes the answer.

@@ -10,7 +10,7 @@ Usage in a video file:
             ...
             self.apw_outro()
 
-APWScene sets up the narration voice (Piper, see make_voice), keeps a small logo in the bottom-right corner,
+APWScene sets up the narration voice (Chatterbox clone of John, else Piper; see make_voice), keeps a small logo in the bottom-right corner,
 and provides a standard intro and outro. Build titles, step labels and bullets
 with the helpers below so every video looks the same.
 """
@@ -24,7 +24,14 @@ ASSETS = Path(__file__).parent / "assets"
 LOGO_PATH = ASSETS / "apw_logo.png"
 
 # --- Narration voice ---------------------------------------------------------
-# Piper runs offline on this PC. Models live in voices/ (git-ignored); see piper_service.py
+# First choice: Chatterbox, cloned from a sample of John's voice (see chatterbox_service.py).
+# It needs voices/john_sample.wav and the .venv-chatterbox venv; otherwise Piper is used.
+VOICE_SAMPLE = Path(__file__).parent / "voices" / "john_sample.wav"
+CLONE_EXAGGERATION = 0.5  # 0.5 natural; lower is flatter, higher more animated
+CLONE_CFG = 0.6           # pace: lower (~0.3) is slower and more deliberate, higher a little quicker
+CLONE_GAP = 0.25          # seconds of silence after each sentence
+
+# Fallback: Piper runs offline on this PC. Models live in voices/ (git-ignored); see piper_service.py
 # for the download command. If the model is missing, videos fall back to gTTS.
 VOICE_MODEL = Path(__file__).parent / "voices" / "en_GB-northern_english_male-medium.onnx"
 # Pace comes mostly from pauses, not stretched words: a length_scale much above 1.1 slurs.
@@ -122,7 +129,14 @@ def show_callout(c):
 
 
 def make_voice():
-    """House narration voice: Piper if its model is downloaded, otherwise gTTS."""
+    """House narration voice: Chatterbox (John's cloned voice), else Piper, else gTTS."""
+    if VOICE_SAMPLE.exists():
+        try:
+            from chatterbox_service import ChatterboxService
+            return ChatterboxService(VOICE_SAMPLE, exaggeration=CLONE_EXAGGERATION, cfg_weight=CLONE_CFG,
+                                     sentence_silence=CLONE_GAP)
+        except FileNotFoundError as e:
+            logger.warning(f"{e}; using Piper instead.")
     if VOICE_MODEL.exists():
         try:
             from piper_service import PiperService

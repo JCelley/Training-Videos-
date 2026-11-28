@@ -1,213 +1,213 @@
 WEBVTT
 
 1
-00:00:01.000 --> 00:00:03.483
+00:00:01.000 --> 00:00:03.747
 True position, part three. Into three D,
 
 2
-00:00:03.583 --> 00:00:06.325
+00:00:03.847 --> 00:00:06.880
 where the tolerance zone becomes a cylinder.
 
 3
-00:00:09.033 --> 00:00:10.473
+00:00:09.583 --> 00:00:11.380
 In part one we drew the zone as
 
 4
-00:00:10.573 --> 00:00:12.708
+00:00:11.480 --> 00:00:14.133
 a circle, looking straight down on the plate.
 
 5
-00:00:12.800 --> 00:00:15.813
+00:00:14.216 --> 00:00:17.624
 But a hole has depth. Tip the part over, and you'll
 
 6
-00:00:15.913 --> 00:00:18.682
+00:00:17.724 --> 00:00:20.856
 see the circle is really the end of a cylinder.
 
 7
-00:00:18.766 --> 00:00:21.191
+00:00:20.950 --> 00:00:24.206
 The zone extends through the full depth of the
 
 8
-00:00:21.291 --> 00:00:23.277
+00:00:24.306 --> 00:00:26.980
 hole, and it stands square to datum A.
 
 9
-00:00:23.866 --> 00:00:26.436
+00:00:27.566 --> 00:00:30.800
 To find the axis, the C M M probes the hole wall
 
 10
-00:00:26.536 --> 00:00:29.828
+00:00:30.900 --> 00:00:35.036
 at several depths, at least near the top and near the bottom.
 
 11
-00:00:29.916 --> 00:00:31.844
+00:00:35.133 --> 00:00:37.653
 The axis that counts is the axis of the
 
 12
-00:00:31.944 --> 00:00:34.495
+00:00:37.753 --> 00:00:41.078
 largest perfect pin that would fit inside the hole.
 
 13
-00:00:34.595 --> 00:00:37.354
+00:00:41.178 --> 00:00:44.773
 The standard calls that pin the actual mating envelope.
 
 14
-00:00:38.550 --> 00:00:42.124
+00:00:45.966 --> 00:00:50.173
 Here's the zone cylinder, magnified sideways so we can see
 
 15
-00:00:42.224 --> 00:00:45.291
+00:00:50.273 --> 00:00:53.886
 inside. The yellow line is the true position axis.
 
 16
-00:00:45.383 --> 00:00:48.393
+00:00:53.983 --> 00:00:57.281
 A straight hole that's square to A, but shifted a
 
 17
-00:00:48.493 --> 00:00:51.186
+00:00:57.381 --> 00:01:00.333
 little, has the same error at the top and at
 
 18
-00:00:51.286 --> 00:00:55.122
+00:01:00.433 --> 00:01:04.633
 the bottom. Position is forty-five ten-thousandths. It passes.
 
 19
-00:00:55.216 --> 00:00:58.342
+00:01:04.733 --> 00:01:08.077
 Now the drill wanders. The top of the hole is still
 
 20
-00:00:58.442 --> 00:01:01.505
+00:01:08.177 --> 00:01:11.453
 in the same place, but the bottom has drifted out.
 
 21
-00:01:01.600 --> 00:01:05.644
+00:01:11.550 --> 00:01:16.275
 Check each end. The top is still forty-five ten-thousandths.
 
 22
-00:01:05.744 --> 00:01:08.408
+00:01:16.375 --> 00:01:19.493
 At the bottom, delta X is four and delta
 
 23
-00:01:08.508 --> 00:01:12.622
+00:01:19.593 --> 00:01:24.399
 Y is five thousandths: that's twelve point eight thousandths.
 
 24
-00:01:12.722 --> 00:01:15.937
+00:01:24.499 --> 00:01:28.260
 The axis leaves the cylinder, so the hole fails.
 
 25
-00:01:16.033 --> 00:01:19.872
+00:01:28.350 --> 00:01:33.114
 Looking only at the top of the hole, this part would have passed. The
 
 26
-00:01:19.972 --> 00:01:23.810
+00:01:33.214 --> 00:01:37.979
 whole depth has to be in the zone, so position reports the worst end.
 
 27
-00:01:23.910 --> 00:01:27.292
+00:01:38.079 --> 00:01:42.280
 Most C M M software checks the axis at both ends of the hole.
 
 28
-00:01:28.483 --> 00:01:31.369
+00:01:43.466 --> 00:01:47.315
 Because the zone is a cylinder square to A, it limits
 
 29
-00:01:31.469 --> 00:01:34.469
+00:01:47.415 --> 00:01:51.413
 tilt too. The most tilt that can still pass runs corner
 
 30
-00:01:34.569 --> 00:01:37.512
+00:01:51.513 --> 00:01:55.436
 to corner: ten thousandths over the depth of the hole.
 
 31
-00:01:37.600 --> 00:01:40.479
+00:01:55.533 --> 00:01:58.979
 If the hole needs to be straighter than that, the designer
 
 32
-00:01:40.579 --> 00:01:43.869
+00:01:59.079 --> 00:02:03.015
 can add a perpendicularity callout under it. That zone is smaller,
 
 33
-00:01:43.969 --> 00:01:46.489
+00:02:03.115 --> 00:02:06.133
 and it can float anywhere inside the position zone.
 
 34
-00:01:46.583 --> 00:01:49.855
+00:02:06.233 --> 00:02:09.403
 The tighter perpendicularity controls tilt.
 
 35
-00:01:49.955 --> 00:01:52.442
+00:02:09.503 --> 00:02:11.913
 Position still controls location.
 
 36
-00:01:53.633 --> 00:01:57.186
+00:02:13.100 --> 00:02:17.135
 The diameter symbol decides the shape of the zone. With it,
 
 37
-00:01:57.286 --> 00:01:59.910
+00:02:17.235 --> 00:02:20.220
 the zone is a cylinder, for a hole or a pin.
 
 38
-00:02:00.000 --> 00:02:03.426
+00:02:20.316 --> 00:02:24.659
 Without it, the zone is two parallel planes. That's used for
 
 39
-00:02:03.526 --> 00:02:06.601
+00:02:24.759 --> 00:02:28.658
 a slot or a tab, where only one direction matters: the
 
 40
-00:02:06.701 --> 00:02:09.481
+00:02:28.758 --> 00:02:32.286
 center plane of the slot has to lie between them.
 
 41
-00:02:09.566 --> 00:02:13.169
+00:02:32.383 --> 00:02:36.588
 Watch for that symbol when you read the frame. Without the diameter,
 
 42
-00:02:13.269 --> 00:02:16.491
+00:02:36.688 --> 00:02:40.451
 the ten thousandths is a total width, so the center plane can
 
 43
-00:02:16.591 --> 00:02:19.977
+00:02:40.551 --> 00:02:44.503
 be off at most five thousandths to either side of true position.
 
 44
-00:02:21.166 --> 00:02:24.732
+00:02:45.700 --> 00:02:49.959
 Position also controls coaxial features, like a turned diameter
 
 45
-00:02:24.832 --> 00:02:26.826
+00:02:50.059 --> 00:02:52.450
 that has to run true to another one.
 
 46
-00:02:26.916 --> 00:02:30.456
+00:02:52.533 --> 00:02:56.733
 Datum A is the axis of the large diameter. The small
 
 47
-00:02:30.556 --> 00:02:34.587
+00:02:56.833 --> 00:03:01.613
 diameter's axis must lie in a cylinder around datum axis A.
 
 48
-00:02:34.683 --> 00:02:37.790
+00:03:01.700 --> 00:03:05.039
 This matters more under the two thousand eighteen
 
 49
-00:02:37.890 --> 00:02:42.174
+00:03:05.139 --> 00:03:09.741
 standard. It removed the concentricity symbol completely. Position,
 
 50
-00:02:42.274 --> 00:02:45.316
+00:03:09.841 --> 00:03:13.110
 runout or profile are used instead. You'll still
 
 51
-00:02:45.416 --> 00:02:48.719
+00:03:13.210 --> 00:03:16.760
 see concentricity on older two thousand nine prints.
 
 52
-00:02:49.416 --> 00:02:52.833
+00:03:17.450 --> 00:03:22.386
 Next, in part four: material modifiers. M M
 
 53
-00:02:52.933 --> 00:02:55.287
+00:03:22.486 --> 00:03:25.900
 C, L M C, and bonus tolerance.
